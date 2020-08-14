@@ -1,10 +1,3 @@
-if(document.readyState=='loading'){
-  document.addEventListener('DOMContentLoader',ready);
-}
-else{
-  ready()
-}
-
 const ready =()=>{
   const removeItemButtons = document.getElementsByClassName('btn-danger')
   for(let i = 0; i<removeItemButtons.length;i++){
@@ -27,11 +20,17 @@ const ready =()=>{
 }
 
 const purchaseClicked = () =>{
-  alert('Gracias, vuelva prontos c:');
-  const cartItems = document.getElementsByClassName('cart-items')[0]
-  while(cartItems.hasChildNodes){
-    cartItems.removeChild(cartItems.firstChild)
+  const cartItems = document.getElementsByClassName('cart-items')[0];
+  if(cartItems.hasChildNodes())
+  {
+    while(cartItems.hasChildNodes()){
+      cartItems.removeChild(cartItems.firstChild)
+    }
+    alert('Gracias, vuelva prontos c:');
+  }else{
+    alert('Tu carrito está vacío');
   }
+  
   updateCartTotal();
 }
 const quantityChanged = (event) =>{
@@ -58,7 +57,7 @@ const addItemToCart = (title, price, image) =>{
   const cartItemsNames = document.getElementsByClassName('cart-item-title');
   for (let i = 0; i < cartItemsNames.length; i++) {
     if(cartItemsNames[i].innerText === title){
-      alert("This item is already in the cart")
+      alert("El artículo ya está en el carrito")
       return
     }
     
@@ -66,7 +65,7 @@ const addItemToCart = (title, price, image) =>{
   let cartItems = document.getElementsByClassName('cart-items')[0];
   const  cartRowContent = `
       <div class="cart-item cart-column">
-        <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+        <img class="cart-item-image" src="${image}" width="100" height="100">
         <span class="cart-item-title">${title}</span>
       </div>
       <span class="cart-price cart-column">${price}</span>
@@ -103,4 +102,11 @@ const updateCartTotal = () =>{
   }
   total = Math.round(total * 100)/100
   document.getElementsByClassName('cart-total-price')[0].innerText = `$${total}`;
+}
+
+if(document.readyState=='loading'){
+  document.addEventListener('DOMContentLoader',ready);
+}
+else{
+  ready()
 }
