@@ -1,31 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shop</title>
-    <link rel="stylesheet" href="/src/styles/style.css">
-</head>
-<body>
-    <header class="header">
-
-
-    </header>
-    <main class="shop-container">
-        <div class="shop-item">
-            <img class="shop-item-image" src="">
-            <div class="shop-item-details">
-                <span class="shop-item-title">Album 1</span>
-                <span class="shop-item-price">$12.99</span>
-                <img class="btn btn-primary shop-item-button" alt="" src="">
+<html>
+    <head>
+        <title>The Generics | Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="src/styles/style.css" />
+        <script src="src/js/store.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1 class="band-name band-name-large">The Generics</h1>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Our Catalog</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img class="shop-item-image" src="src/assets/product-01.jpg">
+                    <div class="shop-item-details">
+                        <div class="shop-item-info">
+                            <span class="shop-item-title">Jamón Zenú 450g</span>
+                            <span class="shop-item-price">$12.99</span>
+                        </div>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img class="shop-item-image" src="src/assets/product-02.jpg">
+                    <div class="shop-item-details">
+                        <div class="shop-item-info">
+                            <span class="shop-item-title">Huevos Avinal AAA x12</span>
+                            <span class="shop-item-price">$14.99</span>
+                        </div>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img class="shop-item-image" src="src/assets/product-03.jpg">
+                    <div class="shop-item-details">
+                        <div class="shop-item-info">
+                            <span class="shop-item-title">Sal Marina Refisal 500g</span>
+                            <span class="shop-item-price">$9.99</span>
+                        </div>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img class="shop-item-image" src="src/assets/product-04.jpg">
+                    <div class="shop-item-details">
+                        <div class="shop-item-info">
+                            <span class="shop-item-title">Leche Entera Alquería 1Lt</span>
+                            <span class="shop-item-price">$7.99</span>
+                        </div>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
             </div>
-        </div>
-
-    </main>
-    <footer>
-
-    </footer>
-    <!--<script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>-->
-    <script type="module" src="src/js/store.js" async></script>
-</body>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Recommended</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img class="shop-item-image" src="src/assets/product-05.jpg">
+                    <div class="shop-item-details">
+                        <div class="shop-item-info">
+                            <span class="shop-item-title">Queso Sabana Alpina x25</span>
+                            <span class="shop-item-price">$19.99</span>
+                        </div>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img class="shop-item-image" src="src/assets/product-06.jpg">
+                    <div class="shop-item-details">
+                        <div class="shop-item-info">
+                            <span class="shop-item-title">Leche Entera Colanta 250ml</span>
+                            <span class="shop-item-price">$6.99</span>
+                        </div>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        <footer class="main-footer">
+        </footer>
+    </body>
 </html>
