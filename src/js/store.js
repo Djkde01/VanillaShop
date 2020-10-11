@@ -26,7 +26,7 @@ const purchaseClicked = () =>{
     while(cartItems.hasChildNodes()){
       cartItems.removeChild(cartItems.firstChild)
     }
-    alert('Gracias, vuelva prontos c:');
+    alert('Gracias por tu compra! :D');
   }else{
     alert('Tu carrito está vacío');
   }
